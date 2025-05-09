@@ -1,77 +1,162 @@
+:root {
+    --primary-color: #108a10;
+    --secondary-color: #79b0b6;
+    --background-color: #5910b9;
+    --text-color: #b34708;
+    --accent-color: #0beeb5;
+    --cor-frente: #8c08c9;
+    --preto: #000000;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root{
-    --preto: #000000;
-    --marinho: #493D9E;
-    --amarelo-claro:#FFF2AF;
-    --roxo-claro:#B2A5FF;
-    --verde: #99BC85;
-    --azul-claro: #E4EFE7;
-    --branco: #FFFFFF;
-    --marron-claro: #FAF1E6;
-}
-
-body{
-    height: 100vh;
-    box-sizing: border-box;
-    background-color: var(--azul-claro);
-    color: var(--preto);
-    font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
+body {
+    background: linear-gradient(180deg, var(--accent-color), var(--background-color));
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
 }
 
 header {
-    display: flex; 
-    width: 100%;
-    background-color: var(--marinho);
-    padding: 1rem;
-    justify-content: center;
-}
-
-.portfolio h1{
-    font-size: 4rem;
-    color: var(--amarelo-claro);
-}
-main {
-    margin: 40px auto;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
     padding: 20px;
-}
-
-
-.container {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 15px;
     justify-content: space-between;
     align-items: center;
-    gap: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.menu-label, .nav-links a {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 20px;
+    background: var(--accent-color);
+    color: var(--primary-color);
+    border-radius: 8px;
+    transition: 0.3s;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.menu-label:hover, .nav-links a:hover {
+    background: var(--background-color);
+    color: var(--secondary-color);
+}
+
+.menu-disciplinas {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 10px;
+    background: var(--secondary-color);
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.menu-disciplinas a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.menu-disciplinas a:hover {
+    background: var(--accent-color);
+    color: var(--primary-color);
+    border-radius: 5px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.search-bar {
+    margin-left: 10px;
+}
+
+.search-bar input {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+.content {
+    margin-top: 50px;
+    padding: 125px;
+}
+
+.content h1 {
+    font-size: 42px;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.content h2 {
+    font-size: 32px;
+    color: var(--secondary-color);
+}
+
+#conteudo {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    background-color: var(--primary-color);
+    color: var(--cor-frente);
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+
+#temas {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
     flex-wrap: wrap;
 }
 
-.disciplina {
-    display: flex;
-    justify-content: center;
-    background-color: var(--branco);
-    border-radius: 10px;
-    padding: 30px;
-    width: 80%;
-    min-width: 280px;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.tema-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-.disciplina:hover {
-    transform: translateY(-10px) scale(1.05);
-    box-shadow: 0 0 0 25px rgba(0, 0, 0, 0.2);
+.tema-btn:hover {
+    background-color: var(--secondary-color);
 }
 
-.disciplina a {
-    color: var(--verde);
-    font-size: 5rem;
-    text-decoration: none;
-}
+footer {
+    position: fixed;
+    bottom: 0;
+    background-color: var(--primary-color);
+    color: white;
+    width: 100%;
+    padding: 10px;
+  }
 
 
